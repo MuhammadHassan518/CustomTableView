@@ -2,7 +2,7 @@
 //  ViewController.swift
 //  CustomTableView
 //
-//  Created by muhammad hassan on 23/02/2022.
+//  Created by Muhammad Hassan on 23/02/2022.
 //
 
 import UIKit
@@ -11,15 +11,18 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
 
     let ArrayNew = ["Pakistan","People","Private","Food","Do not","Eats","Because","They","Are","Pakistani"]
     let Imags = ["mir","mir2","mir3","mir4","mir5","mir2","mir3","mir4","mir5","mir"]
+    
     @IBOutlet weak var TableViews: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
+    
         TableViews.dataSource = self
         TableViews.delegate = self
 
          }
 
-    // MARK: - Table view data source
+    // Table view data source
 
      func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -35,11 +38,10 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "CellCustom", for: indexPath) as! CellCustom
         cell.lblName.text = ArrayNew[indexPath.row]
-         cell.ImageShow.image = UIImage(named: Imags[indexPath.row])
+        cell.ImageShow.image = UIImage(named: Imags[indexPath.row])
         return cell
     }
 
-
-
 }
 
+// I will be thankfull to you if you suggest me some thingd i forget to do. 
