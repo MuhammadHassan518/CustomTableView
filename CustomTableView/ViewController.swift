@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let ArrayNew = ["Pakistan","People","Private","Food","Do not","Eats","Because","They","Are","Pakistani"]
+    let ArrayNew = ["Pakistan","Turkey","Bangladesh","Iron","China","Russia","Afghanistan","Mangolia","Finally","Pakistan"]
     let Imags = ["mir","mir2","mir3","mir4","mir5","mir2","mir3","mir4","mir5","mir"]
     
     @IBOutlet weak var TableViews: UITableView!
