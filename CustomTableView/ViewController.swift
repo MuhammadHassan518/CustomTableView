@@ -9,14 +9,14 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let ArrayNew = ["Pakistan","Turkey","Bangladesh","Iron","China","Russia","Afghanistan","Mangolia","Finally","Pakistan"]
+    let ArrayNew = ["Pakistan","People","Private","Food","Do not","Eats","Because","They","Are","Pakistani"]
     let Imags = ["mir","mir2","mir3","mir4","mir5","mir2","mir3","mir4","mir5","mir"]
     
     @IBOutlet weak var TableViews: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
-    
+
         TableViews.dataSource = self
         TableViews.delegate = self
 
@@ -41,7 +41,38 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         cell.ImageShow.image = UIImage(named: Imags[indexPath.row])
         return cell
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let HeaderView = UIView(frame: CGRect(x: 0, y: 0, width: TableViews.frame.size.width, height: 10))
+        HeaderView.backgroundColor = .green
+        let HeaderTitle = UILabel(frame: CGRect(x: 10, y: 10, width: TableViews.frame.size.width, height: 20))
+        HeaderTitle.text = "Hi You Welcome"
+        HeaderView.addSubview(HeaderTitle)
+        return HeaderView
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        40
+    }
+   
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        let Footer = UIView()
+        Footer.backgroundColor = UIColor.green
+        let titleLabel = UILabel(frame: CGRect(x:10,y: 5 ,width:350,height:30))
+        titleLabel.textColor = .blue
+        titleLabel.text  = "Hi I am Muhammad Hassan"
+        Footer.addSubview(titleLabel)
+        return Footer
+    }
 
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 40
+    }
+    
+    
 }
 
 // I will be thankfull to you if you suggest me some thingd i forget to do. 
+
+
