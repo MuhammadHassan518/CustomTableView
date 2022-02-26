@@ -5,6 +5,8 @@
 //  Created by Muhammad Hassan on 23/02/2022.
 //
 
+
+// Note Custom TableView with Static Header and Footer and passing data from one view to other view..
 import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
@@ -20,19 +22,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         TableViews.dataSource = self
         TableViews.delegate = self
 
-         }
+    }
 
     // Table view data source
 
-     func numberOfSections(in tableView: UITableView) -> Int {
-        return 1
-    }
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        return 120
-    }
-     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return ArrayNew.count
-    }
+    func numberOfSections(in tableView: UITableView) -> Int { 1 }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat { 120 }
+    
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int { ArrayNew.count }
 
    
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -43,17 +41,16 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        let HeaderView = UIView(frame: CGRect(x: 0, y: 0, width: TableViews.frame.size.width, height: 10))
+        let HeaderView = UIView()
         HeaderView.backgroundColor = .green
         let HeaderTitle = UILabel(frame: CGRect(x: 10, y: 10, width: TableViews.frame.size.width, height: 20))
         HeaderTitle.text = "Hi You Welcome"
+        HeaderTitle.textAlignment = .center
         HeaderView.addSubview(HeaderTitle)
         return HeaderView
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        40
-    }
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat { 40 }
    
     
     func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
@@ -61,18 +58,27 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         Footer.backgroundColor = UIColor.green
         let titleLabel = UILabel(frame: CGRect(x:10,y: 5 ,width:350,height:30))
         titleLabel.textColor = .blue
-        titleLabel.text  = "Hi I am Muhammad Hassan"
+        titleLabel.textAlignment = .right
+        titleLabel.text  = "@ Hi I am Muhammad Hassan"
         Footer.addSubview(titleLabel)
         return Footer
     }
 
-    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 40
-    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 40 }
     
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+    
+        let second = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondView
+        self.navigationController?.pushViewController(second, animated: true)
+        
+        second.StrLabel = ArrayNew[indexPath.row]
+        second.StrImage = Imags[indexPath.row]
+        }
     
 }
 
-// I will be thankfull to you if you suggest me some thingd i forget to do. 
+// I will be thankfull to you if you suggest me some thingd i forget to do.
+
+
 
 

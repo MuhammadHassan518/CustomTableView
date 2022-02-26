@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0E10955D27CA75CB000E4332 /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E10955C27CA75CB000E4332 /* SecondView.swift */; };
 		0E60DBF227C74C0500A4D5AE /* CellCustom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E60DBF127C74C0500A4D5AE /* CellCustom.swift */; };
 		0E72F5B427C68A3D00B8FEA0 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72F5B327C68A3D00B8FEA0 /* AppDelegate.swift */; };
 		0E72F5B627C68A3D00B8FEA0 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E72F5B527C68A3D00B8FEA0 /* SceneDelegate.swift */; };
@@ -17,6 +18,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0E10955C27CA75CB000E4332 /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
 		0E60DBF127C74C0500A4D5AE /* CellCustom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CellCustom.swift; sourceTree = "<group>"; };
 		0E72F5B027C68A3D00B8FEA0 /* CustomTableView.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CustomTableView.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0E72F5B327C68A3D00B8FEA0 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -66,6 +68,7 @@
 				0E72F5BE27C68A4300B8FEA0 /* LaunchScreen.storyboard */,
 				0E72F5C127C68A4300B8FEA0 /* Info.plist */,
 				0E60DBF127C74C0500A4D5AE /* CellCustom.swift */,
+				0E10955C27CA75CB000E4332 /* SecondView.swift */,
 			);
 			path = CustomTableView;
 			sourceTree = "<group>";
@@ -142,6 +145,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				0E72F5B827C68A3D00B8FEA0 /* ViewController.swift in Sources */,
+				0E10955D27CA75CB000E4332 /* SecondView.swift in Sources */,
 				0E72F5B427C68A3D00B8FEA0 /* AppDelegate.swift in Sources */,
 				0E60DBF227C74C0500A4D5AE /* CellCustom.swift in Sources */,
 				0E72F5B627C68A3D00B8FEA0 /* SceneDelegate.swift in Sources */,
