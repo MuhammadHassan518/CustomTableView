@@ -11,8 +11,8 @@ import UIKit
 
 class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
 
-    let ArrayNew = ["Pakistan","People","Private","Food","Do not","Eats","Because","They","Are","Pakistani"]
-    let Imags = ["mir","mir2","mir3","mir4","mir5","mir2","mir3","mir4","mir5","mir"]
+    var ArrayNew = ["Pakistan","People","Private","Food","Do not","Eats","Because","They","Are","Pakistani"]
+    var Imags = ["mir","mir2","mir3","mir4","mir5","mir2","mir3","mir4","mir5","mir"]
     
     @IBOutlet weak var TableViews: UITableView!
     
@@ -67,14 +67,21 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
     func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat { 40 }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-    
         let second = storyboard?.instantiateViewController(withIdentifier: "SecondVC") as! SecondView
         self.navigationController?.pushViewController(second, animated: true)
-        
         second.StrLabel = ArrayNew[indexPath.row]
         second.StrImage = Imags[indexPath.row]
         }
     
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete
+        {
+            ArrayNew.remove(at: indexPath.row)
+            Imags.remove(at: indexPath.row)
+            TableViews.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
 }
 
 // I will be thankfull to you if you suggest me some thingd i forget to do.

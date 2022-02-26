@@ -8,7 +8,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Custome Table View -->
         <scene sceneID="bw1-Ce-SZf">
             <objects>
                 <viewController id="gmy-uY-Uxy" customClass="ViewController" customModule="CustomTableView" customModuleProvider="target" sceneMemberID="viewController">
@@ -70,7 +70,7 @@
                             <constraint firstItem="eCA-pL-sE4" firstAttribute="trailing" secondItem="T9L-8s-z2n" secondAttribute="trailing" id="wOo-n7-VMm"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" id="JLD-IA-1Lf"/>
+                    <navigationItem key="navigationItem" title="Custome Table View " id="JLD-IA-1Lf"/>
                     <connections>
                         <outlet property="TableViews" destination="T9L-8s-z2n" id="bfT-EL-R4O"/>
                     </connections>
